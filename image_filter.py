@@ -24,3 +24,6 @@ def scharr_filter(input):
   gradxy = tf.concat([gradxy_r, gradxy_g], axis=3)
   gradxy = tf.concat([gradxy, gradxy_b], axis=3)
   return gradxy
+
+def conv2d(x, W):
+    return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
